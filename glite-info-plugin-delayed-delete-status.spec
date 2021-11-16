@@ -1,17 +1,15 @@
 Name:           glite-info-plugin-delayed-delete-status
 Version:        1.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Updates GLUE state attributes of delayed delete entries in the Top BDII
 Group:          Development/Libraries
 License:        ASL 2.0
-URL:            http://gridinfo.web.cern.ch
-# The source for this package was pulled from upstream's vcs.  Use the
-# following commands to generate the tarball:
-#  svn export http://svnweb.cern.ch/guest/gridinfo/glite-info-plugin-delayed-delete-status/tags/R_1_0_1_1 %{name}-%{version}
-#  tar --gzip -czvf %{name}-%{version}.tar.gz %{name}-%{version}
+URL:            https://github.com/EGI-Federation/glite-info-plugin-delayed-delete-status      
 Source:         %{name}-%{version}.src.tgz
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+
+Requires: openldap-servers
 
 %description
 Updates GLUE state attributes of delayed delete entries in the Top BDII
@@ -40,6 +38,8 @@ rm -rf %{buildroot}
 %doc /usr/share/doc/glite-info-plugin-delayed-delete-status/README
 
 %changelog
+* Tue Nov 16 2021 Andrea Manzi <andrea.manzi@egi.eu> - 1.0.1-2
+- Add missing dependency to openldap-servers
 
 * Wed Sep 02 2013 Maria Alandes <maria.alandes.pradillo@cern.ch> - 1.0.1-1
 - Fixed wrong attribute name GlueCEStatus to GlueCEStateStatus
