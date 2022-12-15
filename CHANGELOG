@@ -7,6 +7,7 @@ and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Move to python3 (#4) (Baptiste Grenier)
 
 ## [1.0.1]
 - Add missing dependency to openldap-servers (#3) (Andrea Manzi)
