@@ -96,8 +96,8 @@ def create_ldap_modif():
                     log.debug("Detected attribute: %s" % (id))
                     attribute = re.search(
                         r"(GlueServiceUniqueID|GlueCEUniqueID|GlueSEUniqueID\
-                                            |GLUE2ApplicationEnvironmentID|GLUE2ComputingActivityID\
-                                            |GLUE2ServiceID|GLUE2EndpointID)",
+                           |GLUE2ApplicationEnvironmentID|GLUE2ComputingActivityID\
+                           |GLUE2ServiceID|GLUE2EndpointID)",
                         id,
                     )
                     if attribute is not None:
