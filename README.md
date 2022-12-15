@@ -28,15 +28,15 @@ The required build dependencies are:
 
 ```shell
 # Checkout tag to be packaged
-git clone https://github.com/EGI-Foundation/glite-info-plugin-delayed-delete-status.git
-cd glite-info-plugin-delayed-delete-status
-git checkout X.X.X
+$ git clone https://github.com/EGI-Foundation/glite-info-plugin-delayed-delete-status.git
+$ cd glite-info-plugin-delayed-delete-status
+$ git checkout X.X.X
 # Building in a container
-docker run --rm -v $(pwd):/source -it quay.io/centos/centos:7
-cd /source
-yum install -y rpm-build yum-utils
-yum-builddep -y glite-info-plugin-delayed-delete-status.spec
-make rpm
+$ docker run --rm -v $(pwd):/source -it quay.io/centos/centos:7
+[root@e65740523cdc /]# cd /source
+[root@e65740523cdc /]# yum install -y rpm-build yum-utils
+[root@e65740523cdc /]# yum-builddep -y glite-info-plugin-delayed-delete-status.spec
+[root@e65740523cdc /]# make rpm
 ```
 
 The RPM will be available into the `build/RPMS` directory.
