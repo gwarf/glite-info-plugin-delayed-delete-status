@@ -14,7 +14,10 @@ install:
 	@mkdir -p $(prefix)/var/log/glite/
 	@mkdir -p $(prefix)/usr/share/doc/glite-info-plugin-delayed-delete-status
 	@install -m 0755 src/glite-info-plugin-delayed-delete-status $(prefix)/usr/libexec
-	@install -m 0644 doc/README $(prefix)/usr/share/doc/glite-info-plugin-delayed-delete-status/
+	@install -m 0644 README.md $(prefix)/usr/share/doc/glite-info-plugin-delayed-delete-status/
+	@install -m 0644 AUTHORS.md $(prefix)/usr/share/doc/glite-info-plugin-delayed-delete-status/
+	@install -m 0644 COPYRIGHT $(prefix)/usr/share/doc/glite-info-plugin-delayed-delete-status/
+	@install -m 0644 LICENSE.txt $(prefix)/usr/share/doc/glite-info-plugin-delayed-delete-status/
 
 dist:
 	@mkdir -p  $(build)/$(NAME)-$(VERSION)/

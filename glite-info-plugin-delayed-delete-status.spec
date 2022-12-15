@@ -39,7 +39,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{_libexecdir}/glite-info-plugin-delayed-delete-status
-%doc %{_docdir}/glite-info-plugin-delayed-delete-status/README
+%doc AUTHORS.md README.md
+%license COPYRIGHT LICENSE.txt
 
 %changelog
 * Tue Nov 16 2021 Andrea Manzi <andrea.manzi@egi.eu> - 1.0.1-2
