@@ -45,7 +45,7 @@ rm -rf %{buildroot}
 * Tue Nov 16 2021 Andrea Manzi <andrea.manzi@egi.eu> - 1.0.1-2
 - Add missing dependency to openldap-servers
 
-* Wed Sep 02 2013 Maria Alandes <maria.alandes.pradillo@cern.ch> - 1.0.1-1
+* Mon Sep 02 2013 Maria Alandes <maria.alandes.pradillo@cern.ch> - 1.0.1-1
 - Fixed wrong attribute name GlueCEStatus to GlueCEStateStatus
 
 * Fri Aug 02 2013 Maria Alandes <maria.alandes.pradillo@cern.ch> - 1.0.0-1
