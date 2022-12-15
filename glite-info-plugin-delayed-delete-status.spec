@@ -1,13 +1,13 @@
-Name:           glite-info-plugin-delayed-delete-status
-Version:        1.0.1
-Release:        2%{?dist}
-Summary:        Updates GLUE state attributes of delayed delete entries in the Top BDII
-Group:          Development/Libraries
-License:        ASL 2.0
-URL:            https://github.com/EGI-Federation/glite-info-plugin-delayed-delete-status
-Source:         %{name}-%{version}.src.tgz
-BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+Name: glite-info-plugin-delayed-delete-status
+Version: 1.0.1
+Release: 2%{?dist}
+Summary: Updates GLUE state attributes of delayed delete entries in the Top BDII
+Group: Development/Libraries
+License: ASL 2.0
+URL: https://github.com/EGI-Federation/glite-info-plugin-delayed-delete-status
+Source: %{name}-%{version}.tar.gz
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: rsync
 BuildRequires: make
