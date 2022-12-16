@@ -12,7 +12,7 @@ BDII documentation is available at
 On RHEL-based systems, it's possible to install packages from [EGI UMD
 packages](https://go.egi.eu/umd). The packages are build from this repository,
 and tested to work with other components part of the Unified Middleware
-Distritbution.
+Distribution.
 
 ## Building packages
 
