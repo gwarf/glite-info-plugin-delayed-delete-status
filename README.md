@@ -52,10 +52,11 @@ Get the source by cloning this repo and do a `make install`.
 
 - Prepare a changelog from the last version, including contributors' names
 - Prepare a PR with
-  - Updating version and changelog in `glite-info-plugin-delayed-delete-status.spec`
-  - Updating authors in `AUTHORS.md`
+  - Updating version and changelog in
+    - [CHANGELOG](CHANGELOG)
+    - [glite-info-plugin-delayed-delete-status.spec](glite-info-plugin-delayed-delete-status.spec)
 - Once the PR has been merged tag and release a new version in GitHub
-  - Packages will be built using Travis and attached to the release page
+  - Packages will be built using GitHub Actions and attached to the release page
 
 ## History
 
