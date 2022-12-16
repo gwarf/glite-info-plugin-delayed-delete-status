@@ -38,6 +38,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%dir /var/log/glite
 %{_libexecdir}/glite-info-plugin-delayed-delete-status
 %doc %{_docdir}/%{name}-%{version}/README.md
 %doc %{_docdir}/%{name}-%{version}/AUTHORS.md
