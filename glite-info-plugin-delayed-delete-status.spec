@@ -1,6 +1,6 @@
 Name: glite-info-plugin-delayed-delete-status
-Version: 1.0.1
-Release: 2%{?dist}
+Version: 2.0.0
+Release: 1%{?dist}
 Summary: Updates GLUE state attributes of delayed delete entries in the Top BDII
 Group: Development/Libraries
 License: ASL 2.0
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 %license /usr/share/licenses/%{name}-%{version}/LICENSE.txt
 
 %changelog
+* Fri Dec 16 2022 Baptiste Grenier <baptiste.grenier@egi.eu> - 2.0.0-1
+- Import community files, setup GitHub Actions, move to python3 (#4) (Baptiste Grenier)
+
 * Tue Nov 16 2021 Andrea Manzi <andrea.manzi@egi.eu> - 1.0.1-2
 - Add missing dependency to openldap-servers
 

@@ -12,7 +12,7 @@ BDII documentation is available at
 On RHEL-based systems, it's possible to install packages from [EGI UMD
 packages](https://go.egi.eu/umd). The packages are build from this repository,
 and tested to work with other components part of the Unified Middleware
-Distritbution.
+Distribution.
 
 ## Building packages
 
@@ -46,16 +46,17 @@ The RPM will be available into the `build/RPMS` directory.
 This procedure is not recommended for production deployment, please consider
 using packages.
 
-Get the source by cloning this repo and do a `make install`.
+Get the source by cloning this repository and do a `make install`.
 
 ## Preparing a release
 
 - Prepare a changelog from the last version, including contributors' names
 - Prepare a PR with
-  - Updating version and changelog in `glite-info-plugin-delayed-delete-status.spec`
-  - Updating authors in `AUTHORS.md`
+  - Updating version and changelog in
+    - [CHANGELOG](CHANGELOG)
+    - [glite-info-plugin-delayed-delete-status.spec](glite-info-plugin-delayed-delete-status.spec)
 - Once the PR has been merged tag and release a new version in GitHub
-  - Packages will be built using Travis and attached to the release page
+  - Packages will be built using GitHub Actions and attached to the release page
 
 ## History
 

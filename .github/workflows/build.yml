@@ -67,18 +67,33 @@ jobs:
           name: rpms${{ matrix.centos-version }}
           path: |
             build/RPMS/noarch/glite-info-plugin-delayed-delete-status-*-1.el${{ matrix.centos-version }}.noarch.rpm
-  install:
-    strategy:
-      matrix:
-        centos-version: [8, 9]
-    name: Install CentOS ${{ matrix.centos-version }} RPMs
+
+  # Dependency taken from PowerTools: openldap-servers
+  centos8-install:
+    name: Install CentOS Stream 8 RPMs
     needs: build
     runs-on: ubuntu-latest
-    container: quay.io/centos/centos:stream${{ matrix.centos-version }}
+    container: quay.io/centos/centos:stream8
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: rpms${{ matrix.centos-version }}
+          name: rpms8
       - name: Install generated RPMs
         run: |
-          yum localinstall -y glite-info-plugin-delayed-delete-status-*.el${{ matrix.centos-version }}.noarch.rpm
+          sed -i 's/^enabled=0/enabled=1/' /etc/yum.repos.d/CentOS-Stream-PowerTools.repo
+          yum localinstall -y glite-info-plugin-delayed-delete-status-*.el8.noarch.rpm
+
+  # Dependency taken from EPEL: openldap-servers
+  centos9-install:
+    name: Install CentOS Stream 9 RPMs
+    needs: build
+    runs-on: ubuntu-latest
+    container: quay.io/centos/centos:stream9
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: rpms9
+      - name: Install generated RPMs
+        run: |
+          yum install -y epel-release
+          yum localinstall -y glite-info-plugin-delayed-delete-status-*.el9.noarch.rpm
