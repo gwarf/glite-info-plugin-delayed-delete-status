@@ -8,8 +8,20 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.0.1] - 2023-03-17
+
+### Changed
+
+- Build and release packages using AlmaLinux 8 and 9. (#7) (Baptiste Grenier)
+
 ## [2.0.0]
+
+### Added
+
 - Import community files, setup GitHub Actions, move to python3 (#4) (Baptiste Grenier)
 
 ## [1.0.1]
+
+### Fixed
+
 - Add missing dependency to openldap-servers (#3) (Andrea Manzi)
