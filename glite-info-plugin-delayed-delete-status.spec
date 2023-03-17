@@ -1,5 +1,5 @@
 Name: glite-info-plugin-delayed-delete-status
-Version: 2.0.0
+Version: 2.0.1
 Release: 1%{?dist}
 Summary: Updates GLUE state attributes of delayed delete entries in the Top BDII
 Group: Development/Libraries
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 %license /usr/share/licenses/%{name}-%{version}/LICENSE.txt
 
 %changelog
+* Fri Mar 17 2023 Baptiste Grenier <baptiste.grenier@egi.eu> - 2.0.1-1
+- Build using AlmaLinux 8 and 9 (#7) (Baptiste Grenier)
+
 * Fri Dec 16 2022 Baptiste Grenier <baptiste.grenier@egi.eu> - 2.0.0-1
 - Import community files, setup GitHub Actions, move to python3 (#4) (Baptiste Grenier)
 
